@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/db');
 
+// Model for the User table for MySQL
 const User = sequelize.define('User', {
     id: {
         type: DataTypes.INTEGER,

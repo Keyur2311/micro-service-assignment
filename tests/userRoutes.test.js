@@ -14,12 +14,16 @@ const app = express();
 app.use(express.json()); // Middleware to parse JSON
 app.use('/api', userRoutes); // Mount the routes under /api
 
+
+// Test suite for userRoutes
 describe('userRoutes', () => {
 
+    // Test case for POST /api/users
     describe('POST /api/users', () => {
         it('should call addUser controller method', async () => {
             userController.addUser.mockImplementation((req, res) => res.status(201).json({ message: 'User added' }));
 
+            // Send a POST request to create a new user
             const response = await request(app)
                 .post('/api/users')
                 .send({ name: 'John Doe', email: 'john@example.com' });
@@ -30,6 +34,7 @@ describe('userRoutes', () => {
         });
     });
 
+    // Test case for GET /api/users
     describe('GET /api/users', () => {
         it('should call fetchUsers controller method', async () => {
             userController.fetchUsers.mockImplementation((req, res) => res.status(200).json([{ id: 1, name: 'John Doe' }]));
@@ -42,6 +47,7 @@ describe('userRoutes', () => {
         });
     });
 
+    // Test cases for DELETE /api/users/:userId
     describe('DELETE /api/users/:userId', () => {
         it('should call deleteUser controller method', async () => {
             userController.deleteUser.mockImplementation((req, res) => res.status(200).json({ message: 'User deleted successfully' }));
