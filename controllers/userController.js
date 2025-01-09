@@ -13,8 +13,9 @@ async function addUser(req, res) {
 
 async function fetchUsers(req, res) {
     try {
+        console.log("abccc")
         const filter = req.query.role ? { role: req.query.role } : {};
-        const users = await userService.getAllUsers(filter);
+        const users = await userService.fetchUsers(filter);
         res.status(200).json(users);
     } catch (err) {
         res.status(500).json({ error: err.message });

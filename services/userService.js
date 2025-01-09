@@ -1,10 +1,15 @@
 const User = require('../models/userModel')
 
 const addUser = async (userData) => {
-    return User.create(userData)
+    const user = await User.create(userData);
+    console.log(user);
+    return user;
 }
 
-const getAllUsers = async (filter = {}) => {
+const fetchUsers = async (filter = {}) => {
+    const allusers = await User.findAll();
+    console.log(allusers)
+    console.log("abccc")
     return User.findAll({ where: filter })
 }
 
@@ -18,4 +23,4 @@ const deleteUser = async (userId) => {
     return false;
 }
 
-module.exports = { addUser, getAllUsers, deleteUser }
+module.exports = { addUser, fetchUsers, deleteUser }
