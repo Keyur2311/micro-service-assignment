@@ -103,4 +103,4 @@ Copilot assisted in generating Jest test cases to validate API behavior for addi
 
 ## Screenshot (Docker)
 
-![Docker Screenshot](https://ibb.co/3ccx23S)
+![Docker Screenshot](./assets/docker_screenshot.png)
