@@ -100,3 +100,7 @@ Copilot provided the logic for retrieving users and applying filters based on ro
 
 **3. Writing Jest Tests:**  
 Copilot assisted in generating Jest test cases to validate API behavior for adding, fetching, and deleting users.
+
+## Screenshot (Docker)
+
+![Docker Screenshot](C:\Users\Keyur\OneDrive\Pictures\Screenshots\Screenshot 2025-01-10 114326.png)
