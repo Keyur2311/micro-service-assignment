@@ -19,6 +19,7 @@ Includes Jest tests for ensuring module functionality.
 - Node.js (v14 or later)
 - npm (Node Package Manager)
 - MySQL (v8 or later)
+- Docker
 
 ### Installation
 
@@ -48,7 +49,8 @@ Includes Jest tests for ensuring module functionality.
    ```
 6. Run the application:
    ```bash
-   node app.js
+   docker compose build
+   docker compose up
    ```
 
 ---
